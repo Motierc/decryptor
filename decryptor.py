@@ -1,10 +1,18 @@
 # This MONSTROSTIY was made by Sachit
 # Considering the code quality, not sure if I should be proud or ashamed
 
-import matplotlib.pyplot as plt
-import os
-import pyperclip
-import time
+try:
+  import matplotlib.pyplot as plt
+  import os
+  import pyperclip
+  import time
+except ModuleNotFoundError:
+  input("You haven't downloaded all the modules!\nYou will have to follow these steps to fix this.\n(press enter)")
+  input("1) Open the 'command prompt' (just search for it on your computer).")
+  input("2) Type these snippets of code into it:")
+  input("\tpip install matplotlib")
+  input("\tpip install pyperclip")
+  input("You should now be good to go. (Close this window and re-run the program)")
 
 LET_FREQ_NORM = [8.2, 1.5, 2.8, 4.3, 12.7, 2.2, 2, 6.1, 7, 0.15, 0.77, 4, 2.4, 6.7, 7.5, 1.9, 0.095, 6, 6.3, 9.1, 2.8, 0.98, 2.4, 0.15, 2, 0.074]
 LETTERS = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"  ]
@@ -226,7 +234,7 @@ def decrypt():
     print(anagram(crypt))
     
 decrypt()
-
+input("")
 #key = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
 #key = ["z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"]
 #print(un_sub("Hello my name is sachit sharma, how are you?", key))
